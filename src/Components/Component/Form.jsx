@@ -1,6 +1,6 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
-import CountrySelector from "../Utils/CountrySelector";
+import CountrySelector from "../../Utils/CountrySelector";
 
 
 const Form = () => {
