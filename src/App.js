@@ -1,7 +1,9 @@
 import React from 'react'
-import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Navbar from './Components/Component/Navbar';
+import NotFound from './Pages/NotFound';
+import Footer from './Components/Layout/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -12,18 +14,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="*" element={<NotFound />} />
         </Routes>
-      </Router>
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
